@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herman Legacy Group | Family-Owned Holding Company in Western New York</title>
+<meta name="description" content="Herman Legacy Group is a family-owned company building businesses that strengthen families, communities, and local economies across Western New York.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#13283d;
+  --ink-2:#1d3a54;
+  --ink-soft:#3a4f63;
+  --paper:#f7f4ee;
+  --paper-2:#fffefa;
+  --card:#ffffff;
+  --line:#e6ded0;
+  --line-2:#efe9dd;
+  --muted:#5d6b78;
+  --brass:#c0892d;
+  --brass-dark:#9a6a1d;
+  --accent:#c0892d;
+  --accent-dark:#9a6a1d;
+  --accent-soft:#f5ecd9;
+  --shadow-sm:0 1px 2px rgba(19,40,61,.05),0 4px 14px rgba(19,40,61,.06);
+  --shadow:0 2px 6px rgba(19,40,61,.06),0 18px 44px rgba(19,40,61,.10);
+  --radius:14px;
+  --radius-sm:9px;
+  --maxw:1160px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.62;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:var(--accent-dark);text-decoration:none}
+a:hover{color:var(--accent)}
+h1,h2,h3,h4{font-family:'Fraunces','Georgia',serif;color:var(--ink);line-height:1.08;margin:0 0 .45em;font-weight:600;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,5.2vw,3.7rem)}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+h3{font-size:1.3rem}
+p{margin:0 0 1.1em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:.74rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent-dark);
+  margin:0 0 1rem;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--brass);display:inline-block}
+.lede{font-size:1.18rem;color:var(--ink-soft);max-width:62ch}
+.muted{color:var(--muted)}
+.center{text-align:center}
+.center .eyebrow{justify-content:center}
+.center .lede{margin-left:auto;margin-right:auto}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-weight:600;font-size:.97rem;letter-spacing:.01em;
+  padding:.85rem 1.5rem;border-radius:var(--radius-sm);
+  border:1.5px solid transparent;cursor:pointer;transition:.2s var(--ease);
+  text-decoration:none;line-height:1;
+}
+.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn-primary:hover{background:var(--accent-dark);border-color:var(--accent-dark);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--ink);border-color:#fff}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.18);color:var(--ink)}
+.btn-outline-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn-outline-light:hover{border-color:#fff;color:#fff;transform:translateY(-2px)}
+.btn-row{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:1.8rem}
+.center .btn-row{justify-content:center}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,244,238,.85);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:.7rem;color:var(--ink)}
+.brand:hover{color:var(--ink)}
+.brand-mark{
+  width:40px;height:40px;flex:0 0 40px;border-radius:7px;
+  background:linear-gradient(160deg,var(--ink),var(--ink-2));
+  color:#f3d99a;font-family:'Fraunces',serif;font-weight:600;font-size:1rem;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 1.5px var(--brass), inset 0 0 0 4px var(--ink);
+  letter-spacing:.02em;
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.05}
+.brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.04rem}
+.brand-tag{font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.nav-links{display:flex;align-items:center;gap:.3rem;list-style:none;margin:0;padding:0}
+.nav-links a{
+  color:var(--ink-soft);font-weight:500;font-size:.93rem;
+  padding:.5rem .8rem;border-radius:7px;position:relative;transition:.18s;
+}
+.nav-links a:hover{color:var(--ink);background:rgba(19,40,61,.05)}
+.nav-links a.active{color:var(--ink)}
+.nav-links a.active::after{content:"";position:absolute;left:.8rem;right:.8rem;bottom:.18rem;height:2px;background:var(--brass);border-radius:2px}
+.nav-cta{margin-left:.5rem}
+.nav-toggle{display:none;background:none;border:1.5px solid var(--line);border-radius:8px;width:42px;height:40px;cursor:pointer;align-items:center;justify-content:center}
+.nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{content:"";display:block;width:18px;height:2px;background:var(--ink);position:relative;transition:.2s}
+.nav-toggle span::before{position:absolute;top:-6px}
+.nav-toggle span::after{position:absolute;top:6px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:var(--ink);color:#f1ece2}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(120% 90% at 85% -10%, color-mix(in srgb,var(--accent) 38%, transparent), transparent 60%),
+    radial-gradient(90% 70% at 5% 110%, rgba(192,137,45,.20), transparent 55%);
+  opacity:.9;
+}
+.hero::after{
+  content:"";position:absolute;right:-60px;top:50%;transform:translateY(-50%) rotate(45deg);
+  width:360px;height:360px;border:1px solid rgba(243,217,154,.18);border-radius:24px;pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:2;padding:clamp(4rem,9vw,7.5rem) 24px}
+.hero-inner{max-width:760px}
+.hero h1{color:#fff}
+.hero .eyebrow{color:#f3d99a}
+.hero .eyebrow::before{background:#f3d99a}
+.hero p{color:#cdd6df;font-size:1.2rem;max-width:60ch}
+.hero-stats{display:flex;flex-wrap:wrap;gap:2.4rem;margin-top:2.6rem;padding-top:1.8rem;border-top:1px solid rgba(255,255,255,.14)}
+.hero-stat .n{font-family:'Fraunces',serif;font-size:1.7rem;color:#f3d99a;display:block}
+.hero-stat .l{font-size:.82rem;color:#aeb9c4;letter-spacing:.04em}
+
+/* ---------- sections ---------- */
+.section{padding:clamp(3.5rem,7vw,6rem) 0}
+.section-tint{background:var(--paper-2);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.section-soft{background:var(--accent-soft)}
+.section-ink{background:var(--ink);color:#e7ecf1}
+.section-ink h2,.section-ink h3{color:#fff}
+.section-ink .lede,.section-ink p{color:#c2ccd6}
+.section-ink .eyebrow{color:#f3d99a}
+.section-head{max-width:64ch;margin-bottom:2.6rem}
+.section-head.center{margin-left:auto;margin-right:auto}
+
+/* ---------- grids & cards ---------- */
+.grid{display:grid;gap:1.4rem}
+.g-2{grid-template-columns:repeat(2,1fr)}
+.g-3{grid-template-columns:repeat(3,1fr)}
+.g-4{grid-template-columns:repeat(4,1fr)}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.7rem;box-shadow:var(--shadow-sm);transition:.22s var(--ease);position:relative;overflow:hidden;
+}
+.card::before{content:"";position:absolute;left:0;top:0;height:3px;width:46px;background:var(--accent);border-radius:0 3px 3px 0}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--line-2)}
+.card h3{margin-bottom:.4rem}
+.card p{color:var(--muted);font-size:.98rem;margin-bottom:0}
+.card .ico{width:44px;height:44px;border-radius:10px;background:var(--accent-soft);color:var(--accent-dark);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:600;margin-bottom:1rem;font-size:1.15rem}
+.card-link{margin-top:1.1rem;display:inline-flex;align-items:center;gap:.4rem;font-weight:600;font-size:.92rem;color:var(--accent-dark)}
+.card-link::after{content:"→";transition:.2s}
+.card-link:hover::after{transform:translateX(3px)}
+
+/* portfolio card variant */
+.pcard{display:flex;flex-direction:column}
+.pcard .tag{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.5rem}
+.pcard p{flex:1}
+.pcard .btn{margin-top:1.2rem;align-self:flex-start}
+
+/* simple list */
+.checklist{list-style:none;padding:0;margin:1.2rem 0 0;display:grid;gap:.7rem}
+.checklist li{position:relative;padding-left:1.9rem;color:var(--ink-soft)}
+.checklist li::before{content:"";position:absolute;left:0;top:.45em;width:11px;height:11px;border-radius:3px;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.pill-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.5rem 1rem;font-size:.9rem;font-weight:500;color:var(--ink-soft)}
+
+/* feature split */
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center}
+.panel{background:var(--ink);color:#e7ecf1;border-radius:var(--radius);padding:2.2rem;box-shadow:var(--shadow)}
+.panel h3{color:#fff}
+.panel .checklist li{color:#cdd6df}
+.panel .checklist li::before{box-shadow:0 0 0 4px rgba(255,255,255,.08)}
+
+/* pricing */
+.price-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+.price-card.featured{border-color:var(--accent);box-shadow:var(--shadow);position:relative}
+.price-card.featured::after{content:"Most popular";position:absolute;top:-12px;right:1.4rem;background:var(--accent);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border-radius:999px}
+.price-name{font-family:'Fraunces',serif;font-size:1.5rem;margin-bottom:.2rem}
+.price-tag{font-size:.95rem;color:var(--muted);margin-bottom:1.2rem}
+.price-card .checklist{flex:1;margin-top:0}
+.price-card .btn{margin-top:1.6rem}
+
+/* ---------- forms ---------- */
+.form-wrap{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow-sm)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.field{display:flex;flex-direction:column;gap:.35rem}
+.field.full{grid-column:1 / -1}
+.field label{font-size:.85rem;font-weight:600;color:var(--ink)}
+.field label .req{color:var(--accent-dark)}
+.field input,.field select,.field textarea{
+  font-family:inherit;font-size:.97rem;color:var(--ink);
+  padding:.72rem .85rem;border:1.5px solid var(--line);border-radius:9px;background:var(--paper-2);
+  transition:.16s;width:100%;
+}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);background:#fff}
+.form-note{font-size:.84rem;color:var(--muted);margin-top:1rem}
+.form-status{display:none;margin-top:1.1rem;padding:.85rem 1rem;border-radius:9px;background:var(--accent-soft);color:var(--accent-dark);font-weight:600;font-size:.92rem;border:1px solid var(--accent)}
+.form-status.show{display:block}
+.form-status.error{background:#fbe4e4;color:#8a2a2a;border-color:#d99}
+.hp{position:absolute!important;left:-9999px!important;top:auto;width:1px;height:1px;overflow:hidden}
+.btn[disabled]{opacity:.6;cursor:progress}
+.disclaimer{background:var(--paper-2);border-left:3px solid var(--brass);padding:1rem 1.2rem;border-radius:0 9px 9px 0;font-size:.92rem;color:var(--ink-soft);margin:1.4rem 0}
+
+/* contact info blocks */
+.info-list{list-style:none;padding:0;margin:0;display:grid;gap:1.3rem}
+.info-list li{display:flex;gap:.9rem;align-items:flex-start}
+.info-list .k{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:.15rem}
+.info-list .v{color:var(--ink);font-weight:500}
+
+/* CTA band */
+.cta-band{background:var(--ink);color:#fff;border-radius:18px;padding:clamp(2.2rem,5vw,3.4rem);text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 120% at 100% 0%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 60%)}
+.cta-band > *{position:relative;z-index:2}
+.cta-band h2{color:#fff}
+.cta-band p{color:#cdd6df;max-width:56ch;margin-left:auto;margin-right:auto}
+
+/* ---------- flagship (Venuewise) ---------- */
+.flagship{position:relative;overflow:hidden;color:#eaf1f6;
+  background:radial-gradient(120% 80% at 88% -10%, rgba(57,181,201,.20), transparent 55%), linear-gradient(165deg,#0f2740,#0b1d30);
+  padding:clamp(4.5rem,9vw,7.5rem) 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.flagship::after{content:"";position:absolute;left:-90px;bottom:-90px;width:320px;height:320px;border:1px solid rgba(243,217,154,.14);border-radius:34px;transform:rotate(18deg);pointer-events:none}
+.flagship-inner{position:relative;z-index:2}
+.flagship .eyebrow{color:#f3d99a}
+.flagship .eyebrow::before{background:#f3d99a}
+.flagship-head{display:flex;gap:1.4rem;align-items:flex-start;max-width:64ch;margin-bottom:2.6rem}
+.flagship-badge{flex:0 0 66px;width:66px;height:66px;border-radius:15px;
+  background:linear-gradient(160deg,#3fbdd1,#1f7f93);color:#04222a;
+  font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 32px rgba(57,181,201,.32)}
+.flagship h2{color:#fff;font-size:clamp(2.1rem,4.6vw,3.3rem);margin:0 0 .45rem;line-height:1.05}
+.flagship-sub{color:#c4d4df;font-size:1.14rem;margin:0;max-width:60ch}
+.huddle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.6rem}
+.huddle{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:1.3rem;transition:.22s var(--ease)}
+.huddle:hover{transform:translateY(-3px);border-color:rgba(57,181,201,.55);background:rgba(57,181,201,.09)}
+.huddle-name{display:block;font-family:'Fraunces',serif;font-weight:600;font-size:1.16rem;color:#fff;margin-bottom:.3rem}
+.huddle-name::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;background:#3fbdd1;margin-right:.55rem;vertical-align:middle}
+.huddle-desc{color:#a9bcca;font-size:.92rem;line-height:1.5}
+.btn-flagship{background:#3fbdd1;color:#04222a;border-color:#3fbdd1;font-size:1.06rem;padding:1rem 1.9rem}
+.btn-flagship:hover{background:#5fcedf;border-color:#5fcedf;color:#04222a;transform:translateY(-2px);box-shadow:0 12px 30px rgba(57,181,201,.4)}
+@media(max-width:920px){.huddle-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.huddle-grid{grid-template-columns:1fr}.flagship-head{flex-direction:column;gap:1rem}}
+
+/* ---------- footer ---------- */
+.site-footer{background:var(--ink);color:#aeb9c4;padding:3.4rem 0 1.8rem;margin-top:0}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.4rem;padding-bottom:2.2rem;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot-brand .brand-mark{margin-bottom:1rem}
+.foot-brand p{color:#9aa6b2;font-size:.95rem;max-width:38ch}
+.foot-col h4{color:#fff;font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem;font-weight:700}
+.foot-col ul{list-style:none;padding:0;margin:0;display:grid;gap:.55rem}
+.foot-col a{color:#aeb9c4;font-size:.92rem}
+.foot-col a:hover{color:#f3d99a}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:1.6rem;font-size:.85rem;color:#8290a0}
+.foot-bottom a{color:#8290a0}
+.foot-net{font-size:.8rem;color:#f3d99a;letter-spacing:.04em}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:.6s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:920px){
+  .g-4{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr;gap:2rem}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1 / -1}
+}
+@media(max-width:720px){
+  body{font-size:16px}
+  .nav-toggle{display:flex}
+  .nav-links{
+    position:absolute;top:74px;left:0;right:0;flex-direction:column;align-items:stretch;
+    background:var(--paper);border-bottom:1px solid var(--line);padding:.6rem 16px 1rem;gap:.15rem;
+    box-shadow:var(--shadow);display:none;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:.8rem .6rem}
+  .nav-links a.active::after{display:none}
+  .nav-cta{margin:.5rem 0 0}
+  .g-2,.g-3,.g-4{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .hero-stats{gap:1.6rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">HLG</span>
+      <span class="brand-text"><span class="brand-name">Herman Legacy Group</span><span class="brand-tag">Family-Owned · Est. WNY</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="about.html">About</a></li><li><a href="partner.html">Partner With Us</a></li><li><a href="contact.html">Contact</a></li>
+      <li class="nav-cta"><a class="btn btn-primary" href="partner.html">Partner With Us</a></li>
+    </ul>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap"><div class="hero-inner reveal">
+    <span class="eyebrow">Family-Owned · Western New York</span>
+    <h1>Building Technology, Media, and Community<br>That Strengthen Families and Local Economies</h1>
+    <p>Herman Legacy Group is a family-owned company building technology, media, consulting, service, and community organizations designed to create long-term value.</p>
+    <div class="btn-row"><a class="btn btn-light" href="portfolio.html">Explore Our Companies</a><a class="btn btn-outline-light" href="partner.html">Partner With Us</a></div>
+    <div class="hero-stats"><div class="hero-stat"><span class="n">8</span><span class="l">Companies &amp; initiatives</span></div><div class="hero-stat"><span class="n">6</span><span class="l">Venuewise products</span></div><div class="hero-stat"><span class="n">1</span><span class="l">Family behind it all</span></div></div>
+  </div></div>
+</section><section class="section section-tint"><div class="wrap"><div class="section-head center reveal"><span class="eyebrow">About Herman Legacy Group</span><h2>The corporate home for a family of companies</h2><p class="lede">We are the parent organization behind a growing portfolio of technology, media, consulting, service, and community companies. Our mission is simple: build and operate businesses that serve families, communities, and local economies — and create value that lasts for generations.</p></div></div></section><section class="flagship">
+  <div class="wrap flagship-inner">
+    <span class="eyebrow reveal">Featured Company</span>
+    <div class="flagship-head reveal">
+      <div class="flagship-badge">VW</div>
+      <div>
+        <h2>Our Flagship Technology Platform</h2>
+        <p class="flagship-sub">Venuewise is our all-in-one sports technology ecosystem connecting families, athletes, coaches, organizations, facilities, and tournaments through a single integrated platform.</p>
+      </div>
+    </div>
+    <div class="huddle-grid"><div class="huddle reveal"><span class="huddle-name">HomeHuddle</span><span class="huddle-desc">The family sports calendar — every team, practice, and game synced in one place for the whole household.</span></div><div class="huddle reveal"><span class="huddle-name">AthleteHuddle</span><span class="huddle-desc">Athlete profiles, stats, highlights, and recruiting tools that help players tell their story.</span></div><div class="huddle reveal"><span class="huddle-name">CoachesHuddle</span><span class="huddle-desc">Scheduling, rosters, and team communication built for the way coaches actually work.</span></div><div class="huddle reveal"><span class="huddle-name">OrganizationHuddle</span><span class="huddle-desc">League and club management for organizations running multiple teams and seasons.</span></div><div class="huddle reveal"><span class="huddle-name">FacilityHuddle</span><span class="huddle-desc">Facility scheduling, bookings, and open-slot management that keeps venues full.</span></div><div class="huddle reveal"><span class="huddle-name">TournamentHuddle</span><span class="huddle-desc">Tournament hosting, brackets, and event coordination from sign-up to final whistle.</span></div></div>
+    <div class="btn-row reveal"><a class="btn btn-flagship" href="https://venuewise.net">Explore Venuewise &rarr;</a></div>
+  </div>
+</section><section class="section "><div class="wrap"><div class="section-head reveal"><span class="eyebrow">Our Companies</span><h2>A portfolio built to strengthen the whole</h2><p class="lede">Beyond our flagship platform, each Herman Legacy Group company adds depth, reach, and resilience to the ecosystem.</p></div><div class="grid g-3"><div class="card pcard reveal"><span class="tag">Consulting</span><h3>Herman Supply Chain Solutions</h3><p>Operations consulting, logistics expertise, KPI dashboards, operational assessments, and performance improvement.</p><a class="btn btn-ghost" href="https://hermansupplychainsolutions.com">Visit the site</a></div><div class="card pcard reveal"><span class="tag">Growth</span><h3>5-Star Growth Solutions</h3><p>Lead recovery, reputation management, customer automation, and local business growth.</p><a class="btn btn-ghost" href="https://5stargrowthsolutions.com">Visit the site</a></div><div class="card pcard reveal"><span class="tag">Media</span><h3>5-Star Sports Media</h3><p>Athlete spotlights, coach spotlights, community sports coverage, sponsorships, and youth media development.</p><a class="btn btn-ghost" href="https://5starsportsmedia.com">Visit the site</a></div><div class="card pcard reveal"><span class="tag">Home Services</span><h3>DDH Home Services</h3><p>Professional residential and commercial property maintenance services.</p><a class="btn btn-ghost" href="https://ddhhomeservices.com">Visit the site</a></div><div class="card pcard reveal"><span class="tag">Events</span><h3>5-Star Community Events</h3><p>Community events, vendor expos, youth sports events, and fundraising.</p><a class="btn btn-ghost" href="https://5starcommunityevents.com">Visit the site</a></div><div class="card pcard reveal"><span class="tag">Foundation</span><h3>Herman Legacy Foundation</h3><p>Community impact, scholarships, youth support, and charitable initiatives.</p><a class="btn btn-ghost" href="https://hermanlegacyfoundation.org">Visit the site</a></div><div class="card pcard reveal"><span class="tag">Network</span><h3>Laurie &amp; Lew Community Network</h3><p>Volunteerism, family support, senior assistance, and community outreach.</p><a class="btn btn-ghost" href="https://laurieandlewcommunitynetwork.org">Visit the site</a></div></div></div></section><section class="section section-tint"><div class="wrap"><div class="split reveal"><div><div class="section-head reveal"><span class="eyebrow">Our Vision</span><h2>Building a legacy that outlasts us</h2></div><p>We believe a family business should be measured in decades, not quarters. Our vision is a self-reinforcing ecosystem of companies — anchored by Venuewise — where technology, media, services, and community work together to lift the people and places we call home.</p></div><div><div class="panel"><h3>What we're building toward</h3><ul class="checklist"><li>A flagship platform that sets the standard for the family</li><li>Companies that support and strengthen one another</li><li>Durable value for families and local economies</li><li>A legacy of giving back through our foundation and network</li></ul></div></div></div></div></section><section class="section "><div class="wrap"><div class="section-head reveal"><span class="eyebrow">Community Impact</span><h2>Success, reinvested where we live</h2><p class="lede">Profit and purpose aren&#x27;t opposites. Through the Herman Legacy Foundation and the Laurie &amp; Lew Community Network, the success of our companies flows back into scholarships, youth support, senior assistance, and neighbors helping neighbors.</p></div><div class="grid g-2"><div class="card reveal"><div class="ico">HL</div><h3>Herman Legacy Foundation</h3><p>Scholarships, youth support, and charitable initiatives across our community.</p><a class="card-link" href="https://hermanlegacyfoundation.org">Visit the Foundation</a></div><div class="card reveal"><div class="ico">LL</div><h3>Laurie &amp; Lew Community Network</h3><p>Volunteerism, family support, senior assistance, and community outreach.</p><a class="card-link" href="https://laurieandlewcommunitynetwork.org">Visit the Network</a></div></div></div></section><section class="section section-tint"><div class="wrap"><div class="section-head center reveal"><span class="eyebrow">Partnership Opportunities</span><h2>Grow with a family-owned company</h2></div><div class="grid g-3"><div class="card reveal"><div class="ico">IN</div><h3>Invest</h3><p>Back established and emerging ventures within a diversified, operator-led portfolio.</p></div><div class="card reveal"><div class="ico">SP</div><h3>Sponsor</h3><p>Support our platform, media, and community initiatives while reaching engaged local audiences.</p></div><div class="card reveal"><div class="ico">CO</div><h3>Collaborate</h3><p>Bring your product, service, or expertise into one of our growing companies.</p></div></div><div class="btn-row" style="justify-content:center"><a class="btn btn-primary" href="partner.html">Partner With Us</a></div></div></section><section class="section "><div class="wrap"><div class="cta-band reveal"><h2>Contact Herman Legacy Group</h2><p>Whether you&#x27;re an investor, sponsor, operator, or community partner, there&#x27;s a place for you in the Herman Legacy story.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-light" href="contact.html">Contact Us</a><a class="btn btn-outline-light" href="partner.html">Partner With Us</a></div></div></div></section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="brand-mark">HLG</span>
+        <p>A family-owned holding company building technology, media, service, consulting, and community platforms with long-term impact.</p>
+        <p style="color:#7f8c99;font-size:.85rem">A Herman Legacy Group company.</p>
+        
+      </div>
+      <div class="foot-col">
+        <h4>Herman Legacy Group</h4>
+        <ul><li><a href="https://hermanlegacygroup.com">Herman Legacy Group</a></li><li><a href="https://venuewise.net">Venuewise</a></li><li><a href="https://hermansupplychainsolutions.com">Herman Supply Chain Solutions</a></li><li><a href="https://5stargrowthsolutions.com">5-Star Growth Solutions</a></li><li><a href="https://5starsportsmedia.com">5-Star Sports Media</a></li><li><a href="https://ddhhomeservices.com">DDH Home Services</a></li><li><a href="https://5starcommunityevents.com">5-Star Community Events</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h4>Community Impact Network</h4>
+        <ul><li><a href="https://hermanlegacyfoundation.org">Herman Legacy Foundation</a></li><li><a href="https://laurieandlewcommunitynetwork.org">Laurie &amp; Lew Community Network</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Herman Legacy Group. Western New York.</span>
+      <span><a href="index.html">Herman Legacy Group</a> &middot; <a href="contact.html">Contact</a></span>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+// ---- Supabase config (publishable key — safe to expose) ----
+var SUPABASE_URL = "https://bkfsjhhclbqrhaolvhmz.supabase.co";
+var SUPABASE_KEY = "sb_publishable_iYZRWl3Xc0qXzMbUl_2InA_unhJeRG2";
+var _sb = null;
+function sbClient(){
+  if(!_sb && window.supabase){ _sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY); }
+  return _sb;
+}
+// Mobile nav
+(function(){
+  var t=document.querySelector('.nav-toggle');
+  var l=document.querySelector('.nav-links');
+  if(t&&l){t.addEventListener('click',function(){l.classList.toggle('open');});}
+})();
+// Footer year
+(function(){var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();})();
+// Reveal on scroll
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  els.forEach(function(e){io.observe(e);});
+})();
+// Form submit -> Supabase insert. Each form has data-table="<table>".
+(function(){
+  document.querySelectorAll('form[data-table]').forEach(function(f){
+    f.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var table = f.getAttribute('data-table');
+      var status = f.querySelector('.form-status');
+      var btn = f.querySelector('button[type="submit"]');
+      // Build payload from named fields
+      var payload = {};
+      f.querySelectorAll('input[name],select[name],textarea[name]').forEach(function(el){
+        payload[el.name] = el.value;
+      });
+      // Honeypot: if filled, silently pretend success (likely a bot)
+      if (payload.hp_field) {
+        if(status){status.className='form-status show';status.textContent='Thanks — your message has been received.';}
+        f.reset(); return;
+      }
+      function ok(){
+        if(status){status.className='form-status show';status.textContent='Thanks — your message has been received. We\u2019ll be in touch soon.';status.scrollIntoView({behavior:'smooth',block:'center'});}
+        f.reset();
+      }
+      function fail(msg){
+        if(status){status.className='form-status show error';status.textContent=msg||'Something went wrong sending your message. Please email us directly and we\u2019ll make it right.';}
+      }
+      var client = sbClient();
+      if(!client){ fail('Form service is still loading — please try again in a moment.'); return; }
+      if(btn){btn.disabled=true;}
+      client.from(table).insert([payload]).then(function(res){
+        if(btn){btn.disabled=false;}
+        if(res && res.error){ console.error('Supabase insert error:', res.error); fail(); }
+        else { ok(); }
+      }).catch(function(err){ if(btn){btn.disabled=false;} console.error(err); fail(); });
+    });
+  });
+})();
+</script>
+</body>
+</html>
