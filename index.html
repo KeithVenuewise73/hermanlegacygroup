@@ -256,11 +256,22 @@ p{margin:0 0 1.1em}
 .huddle-name{display:block;font-family:'Fraunces',serif;font-weight:600;font-size:1.16rem;color:#fff;margin-bottom:.3rem}
 .huddle-name::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;background:#3fbdd1;margin-right:.55rem;vertical-align:middle}
 .huddle-desc{color:#a9bcca;font-size:.92rem;line-height:1.5}
-.powers{margin:0 0 2.4rem;padding:1.25rem 1.5rem;border:1px solid rgba(63,189,209,.35);border-radius:13px;
-  background:rgba(63,189,209,.07);display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem}
-.powers-tag{flex-basis:100%;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#8fd3df;margin-bottom:.2rem}
-.powers-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.32rem;color:#fff}
-.powers-desc{color:#a9bcca;font-size:.96rem}
+.media-label{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#f3d99a;margin:2.4rem 0 1rem}
+.media-pillar{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;margin:0 0 2.6rem;
+  padding:1.7rem 1.9rem;border-radius:16px;
+  background:linear-gradient(120deg, rgba(243,217,154,.14), rgba(255,255,255,.035));
+  border:1px solid rgba(243,217,154,.42);box-shadow:0 14px 40px rgba(0,0,0,.18)}
+.media-pillar-mark{flex:0 0 66px;width:66px;height:66px;border-radius:15px;
+  background:linear-gradient(160deg,#f3d99a,#c0892d);color:#3a2a08;
+  font-family:'Fraunces',serif;font-weight:600;font-size:1.7rem;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 32px rgba(192,137,45,.34)}
+.media-pillar-body{flex:1;min-width:250px}
+.media-pillar-tag{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#f3d99a}
+.media-pillar-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.7rem;color:#fff;margin:.2rem 0 .45rem;line-height:1.05}
+.media-pillar-desc{color:#c8d6e0;font-size:1rem;margin:0 0 1.1rem;max-width:60ch}
+.btn-media{background:#f3d99a;color:#3a2a08;border-color:#f3d99a;font-weight:600}
+.btn-media:hover{background:#f8e7bc;border-color:#f8e7bc;color:#3a2a08;transform:translateY(-2px);box-shadow:0 12px 30px rgba(243,217,154,.35)}
+@media(max-width:600px){.media-pillar{flex-direction:column;align-items:flex-start;text-align:left}}
 .btn-flagship{background:#3fbdd1;color:#04222a;border-color:#3fbdd1;font-size:1.06rem;padding:1rem 1.9rem}
 .btn-flagship:hover{background:#5fcedf;border-color:#5fcedf;color:#04222a;transform:translateY(-2px);box-shadow:0 12px 30px rgba(57,181,201,.4)}
 @media(max-width:920px){.huddle-grid{grid-template-columns:repeat(2,1fr)}}
@@ -340,12 +351,17 @@ p{margin:0 0 1.1em}
     <span class="eyebrow reveal">Featured Company &middot; Flagship Platform</span>
     <h2 class="flagship-title reveal">The Technology Backbone of Herman Legacy Group</h2>
     <p class="flagship-sub reveal">Venuewise is the all-in-one sports technology platform at the center of the group &mdash; a single integrated system that powers the entire Huddle ecosystem and 5-Star Sports Media, connecting families, athletes, coaches, organizations, facilities, and tournaments.</p>
-    <div class="huddle-label reveal">The Huddle ecosystem</div>
+    <div class="huddle-label reveal">The Huddle ecosystem &mdash; six connected products</div>
     <div class="huddle-grid"><div class="huddle reveal"><span class="huddle-name">HomeHuddle</span><span class="huddle-desc">The family sports calendar — every team, practice, and game synced in one place for the whole household.</span></div><div class="huddle reveal"><span class="huddle-name">AthleteHuddle</span><span class="huddle-desc">Athlete profiles, stats, highlights, and recruiting tools that help players tell their story.</span></div><div class="huddle reveal"><span class="huddle-name">CoachesHuddle</span><span class="huddle-desc">Scheduling, rosters, and team communication built for the way coaches actually work.</span></div><div class="huddle reveal"><span class="huddle-name">OrganizationHuddle</span><span class="huddle-desc">League and club management for organizations running multiple teams and seasons.</span></div><div class="huddle reveal"><span class="huddle-name">FacilityHuddle</span><span class="huddle-desc">Facility scheduling, bookings, and open-slot management that keeps venues full.</span></div><div class="huddle reveal"><span class="huddle-name">TournamentHuddle</span><span class="huddle-desc">Tournament hosting, brackets, and event coordination from sign-up to final whistle.</span></div></div>
-    <div class="powers reveal">
-      <span class="powers-tag">Also powered by Venuewise</span>
-      <span class="powers-name">5-Star Sports Media</span>
-      <span class="powers-desc">Athlete &amp; coach spotlights, community sports coverage, sponsorships, and youth media development &mdash; built on the same platform.</span>
+    <div class="media-label reveal">Alongside the Huddles, a media pillar</div>
+    <div class="media-pillar reveal">
+      <div class="media-pillar-mark">5&#9733;</div>
+      <div class="media-pillar-body">
+        <span class="media-pillar-tag">A Venuewise Pillar &middot; Sports Media</span>
+        <h3 class="media-pillar-name">5-Star Sports Media</h3>
+        <p class="media-pillar-desc">Athlete &amp; coach spotlights, community sports coverage, sponsorships, and youth media development &mdash; the storytelling arm of the Venuewise platform and a cornerstone of the Herman Legacy Group.</p>
+        <a class="btn btn-media" href="https://5starsportsmedia.com">Visit 5-Star Sports Media &rarr;</a>
+      </div>
     </div>
     <div class="btn-row reveal"><a class="btn btn-flagship" href="https://venuewise.net">Explore Venuewise &rarr;</a></div>
   </div>
