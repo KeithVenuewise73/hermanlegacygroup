@@ -90,20 +90,20 @@ p{margin:0 0 1.1em}
   background:rgba(247,244,238,.85);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
 }
-.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-.brand{display:flex;align-items:center;gap:.7rem;color:var(--ink)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:88px}
+.brand{display:flex;align-items:center;gap:.85rem;color:var(--ink)}
 .brand:hover{color:var(--ink)}
 .brand-mark{
-  width:40px;height:40px;flex:0 0 40px;border-radius:7px;
+  width:54px;height:54px;flex:0 0 54px;border-radius:11px;
   background:linear-gradient(160deg,var(--ink),var(--ink-2));
-  color:#f3d99a;font-family:'Fraunces',serif;font-weight:600;font-size:1rem;
+  color:#f3d99a;font-family:'Fraunces',serif;font-weight:600;font-size:1.35rem;
   display:flex;align-items:center;justify-content:center;
-  box-shadow:inset 0 0 0 1.5px var(--brass), inset 0 0 0 4px var(--ink);
+  box-shadow:inset 0 0 0 2px var(--brass), inset 0 0 0 5px var(--ink);
   letter-spacing:.02em;
 }
-.brand-text{display:flex;flex-direction:column;line-height:1.05}
-.brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.04rem}
-.brand-tag{font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.brand-text{display:flex;flex-direction:column;line-height:1.08}
+.brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.32rem;letter-spacing:-.01em}
+.brand-tag{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-dark);font-weight:700;margin-top:.1rem}
 .nav-links{display:flex;align-items:center;gap:.3rem;list-style:none;margin:0;padding:0}
 .nav-links a{
   color:var(--ink-soft);font-weight:500;font-size:.93rem;
@@ -242,23 +242,29 @@ p{margin:0 0 1.1em}
 .flagship-inner{position:relative;z-index:2}
 .flagship .eyebrow{color:#f3d99a}
 .flagship .eyebrow::before{background:#f3d99a}
-.flagship-head{display:flex;gap:1.4rem;align-items:flex-start;max-width:64ch;margin-bottom:2.6rem}
-.flagship-badge{flex:0 0 66px;width:66px;height:66px;border-radius:15px;
-  background:linear-gradient(160deg,#3fbdd1,#1f7f93);color:#04222a;
-  font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 12px 32px rgba(57,181,201,.32)}
-.flagship h2{color:#fff;font-size:clamp(2.1rem,4.6vw,3.3rem);margin:0 0 .45rem;line-height:1.05}
-.flagship-sub{color:#c4d4df;font-size:1.14rem;margin:0;max-width:60ch}
-.huddle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.6rem}
+.flagship-wordmark{display:inline-flex;align-items:baseline;flex-wrap:wrap;gap:.25rem .8rem;
+  font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.9rem,6.6vw,5rem);
+  color:#fff;line-height:1;letter-spacing:-.02em;margin:.3rem 0 .5rem}
+.flagship-wordmark .pf{font-family:'Inter',sans-serif;font-weight:700;
+  font-size:clamp(.82rem,1.4vw,1.05rem);letter-spacing:.26em;text-transform:uppercase;color:#5fcedf}
+.flagship-title{color:#fff;font-size:clamp(1.5rem,3.1vw,2.15rem);margin:0 0 .7rem;line-height:1.1;max-width:24ch}
+.flagship-sub{color:#c4d4df;font-size:1.14rem;margin:0;max-width:62ch}
+.huddle-label{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#8fd3df;margin:2.6rem 0 1rem}
+.huddle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.6rem}
 .huddle{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:1.3rem;transition:.22s var(--ease)}
 .huddle:hover{transform:translateY(-3px);border-color:rgba(57,181,201,.55);background:rgba(57,181,201,.09)}
 .huddle-name{display:block;font-family:'Fraunces',serif;font-weight:600;font-size:1.16rem;color:#fff;margin-bottom:.3rem}
 .huddle-name::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;background:#3fbdd1;margin-right:.55rem;vertical-align:middle}
 .huddle-desc{color:#a9bcca;font-size:.92rem;line-height:1.5}
+.powers{margin:0 0 2.4rem;padding:1.25rem 1.5rem;border:1px solid rgba(63,189,209,.35);border-radius:13px;
+  background:rgba(63,189,209,.07);display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem}
+.powers-tag{flex-basis:100%;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#8fd3df;margin-bottom:.2rem}
+.powers-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.32rem;color:#fff}
+.powers-desc{color:#a9bcca;font-size:.96rem}
 .btn-flagship{background:#3fbdd1;color:#04222a;border-color:#3fbdd1;font-size:1.06rem;padding:1rem 1.9rem}
 .btn-flagship:hover{background:#5fcedf;border-color:#5fcedf;color:#04222a;transform:translateY(-2px);box-shadow:0 12px 30px rgba(57,181,201,.4)}
 @media(max-width:920px){.huddle-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.huddle-grid{grid-template-columns:1fr}.flagship-head{flex-direction:column;gap:1rem}}
+@media(max-width:600px){.huddle-grid{grid-template-columns:1fr}}
 
 /* ---------- footer ---------- */
 .site-footer{background:var(--ink);color:#aeb9c4;padding:3.4rem 0 1.8rem;margin-top:0}
@@ -288,7 +294,7 @@ p{margin:0 0 1.1em}
   body{font-size:16px}
   .nav-toggle{display:flex}
   .nav-links{
-    position:absolute;top:74px;left:0;right:0;flex-direction:column;align-items:stretch;
+    position:absolute;top:88px;left:0;right:0;flex-direction:column;align-items:stretch;
     background:var(--paper);border-bottom:1px solid var(--line);padding:.6rem 16px 1rem;gap:.15rem;
     box-shadow:var(--shadow);display:none;
   }
@@ -322,15 +328,17 @@ p{margin:0 0 1.1em}
 </header>
 <section class="section "><div class="wrap"><div class="section-head reveal"><span class="eyebrow">Portfolio</span><h2>Our flagship platform and the companies around it</h2><p class="lede">Herman Legacy Group is a professionally managed portfolio of companies, led by our flagship technology platform, Venuewise.</p></div></div></section><section class="flagship">
   <div class="wrap flagship-inner">
-    <span class="eyebrow reveal">Featured Company</span>
-    <div class="flagship-head reveal">
-      <div class="flagship-badge">VW</div>
-      <div>
-        <h2>Our Flagship Technology Platform</h2>
-        <p class="flagship-sub">Venuewise is our all-in-one sports technology ecosystem connecting families, athletes, coaches, organizations, facilities, and tournaments through a single integrated platform.</p>
-      </div>
-    </div>
+    <span class="eyebrow reveal">Featured Company &middot; Flagship Platform</span>
+    <span class="flagship-wordmark reveal">Venuewise <span class="pf">Platform</span></span>
+    <h2 class="flagship-title reveal">The Technology Backbone of Herman Legacy Group</h2>
+    <p class="flagship-sub reveal">Venuewise is the all-in-one sports technology platform at the center of the group &mdash; a single integrated system that powers the entire Huddle ecosystem and 5-Star Sports Media, connecting families, athletes, coaches, organizations, facilities, and tournaments.</p>
+    <div class="huddle-label reveal">The Huddle ecosystem</div>
     <div class="huddle-grid"><div class="huddle reveal"><span class="huddle-name">HomeHuddle</span><span class="huddle-desc">The family sports calendar — every team, practice, and game synced in one place for the whole household.</span></div><div class="huddle reveal"><span class="huddle-name">AthleteHuddle</span><span class="huddle-desc">Athlete profiles, stats, highlights, and recruiting tools that help players tell their story.</span></div><div class="huddle reveal"><span class="huddle-name">CoachesHuddle</span><span class="huddle-desc">Scheduling, rosters, and team communication built for the way coaches actually work.</span></div><div class="huddle reveal"><span class="huddle-name">OrganizationHuddle</span><span class="huddle-desc">League and club management for organizations running multiple teams and seasons.</span></div><div class="huddle reveal"><span class="huddle-name">FacilityHuddle</span><span class="huddle-desc">Facility scheduling, bookings, and open-slot management that keeps venues full.</span></div><div class="huddle reveal"><span class="huddle-name">TournamentHuddle</span><span class="huddle-desc">Tournament hosting, brackets, and event coordination from sign-up to final whistle.</span></div></div>
+    <div class="powers reveal">
+      <span class="powers-tag">Also powered by Venuewise</span>
+      <span class="powers-name">5-Star Sports Media</span>
+      <span class="powers-desc">Athlete &amp; coach spotlights, community sports coverage, sponsorships, and youth media development &mdash; built on the same platform.</span>
+    </div>
     <div class="btn-row reveal"><a class="btn btn-flagship" href="https://venuewise.net">Explore Venuewise &rarr;</a></div>
   </div>
 </section><section class="section "><div class="wrap"><div class="section-head reveal"><span class="eyebrow">Supporting Companies &amp; Initiatives</span><h2>The rest of the Herman Legacy family</h2><p class="lede">Each company shares the same DNA: practical value, operational discipline, and a commitment to the communities we serve.</p></div><div class="grid g-3"><div class="card pcard reveal"><span class="tag">Consulting</span><h3>Herman Supply Chain Solutions</h3><p>Operations consulting, logistics expertise, KPI dashboards, operational assessments, and performance improvement.</p><a class="btn btn-ghost" href="https://hermansupplychainsolutions.com">Visit the site</a></div><div class="card pcard reveal"><span class="tag">Growth</span><h3>5-Star Growth Solutions</h3><p>Lead recovery, reputation management, customer automation, and local business growth.</p><a class="btn btn-ghost" href="https://5stargrowthsolutions.com">Visit the site</a></div><div class="card pcard reveal"><span class="tag">Media</span><h3>5-Star Sports Media</h3><p>Athlete spotlights, coach spotlights, community sports coverage, sponsorships, and youth media development.</p><a class="btn btn-ghost" href="https://5starsportsmedia.com">Visit the site</a></div><div class="card pcard reveal"><span class="tag">Home Services</span><h3>DDH Home Services</h3><p>Professional residential and commercial property maintenance services.</p><a class="btn btn-ghost" href="https://ddhhomeservices.com">Visit the site</a></div><div class="card pcard reveal"><span class="tag">Events</span><h3>5-Star Community Events</h3><p>Community events, vendor expos, youth sports events, and fundraising.</p><a class="btn btn-ghost" href="https://5starcommunityevents.com">Visit the site</a></div><div class="card pcard reveal"><span class="tag">Foundation</span><h3>Herman Legacy Foundation</h3><p>Community impact, scholarships, youth support, and charitable initiatives.</p><a class="btn btn-ghost" href="https://hermanlegacyfoundation.org">Visit the site</a></div><div class="card pcard reveal"><span class="tag">Network</span><h3>Laurie &amp; Lew Community Network</h3><p>Volunteerism, family support, senior assistance, and community outreach.</p><a class="btn btn-ghost" href="https://laurieandlewcommunitynetwork.org">Visit the site</a></div></div></div></section><section class="section "><div class="wrap"><div class="cta-band reveal"><h2>Interested in one of our companies?</h2><p>We welcome partners, investors, and collaborators across every part of the ecosystem.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-light" href="partner.html">Partner With Us</a><a class="btn btn-outline-light" href="contact.html">Contact Herman Legacy Group</a></div></div></div></section>
